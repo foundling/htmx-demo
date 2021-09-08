@@ -1,0 +1,4 @@
+[ ! -d env ] && echo 'no env!' && virtualenv ./env
+. env/bin/activate
+#pip install -r requirements.txt
+FLASK_APP=server.py FLASK_DEBUG=1 flask run

@@ -1,8 +1,10 @@
-{% for todo in todos %}
+{% for todo in todos.values() %}
 <li 
-    id="{{ todo }}"
+    id="{{ todo.id }}"
+    hx-target='.todo-list'
+    hx-swap="innerHTML"
     hx-trigger="click"
-    hx-delete="/todo/{{todo}}"
-    hx-confirm="delete?">{{ todo }}
+    hx-delete="/todo/{{todo.id}}"
+    hx-confirm="delete?">{{ todo.title }}
 </li>
 {% endfor %}

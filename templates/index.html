@@ -5,13 +5,13 @@
     <body>
         <h1>Todo List</h1>
 
+        <form name="new-todo">
+            <input name="text" type="text" placeholder="add a todo item" value=""></input>
+            <button hx-target=".todo-list" hx-swap="innerHTML" hx-post="/todo">add todo</button>
+        </form>
+
         <ul hx-get="/todos" hx-trigger="load" class="todo-list">
         </ul>
-
-        <form name="new-todo">
-            <input name="todo" type="text" placeholder="add a todo item"></input>
-            <button hx-target=".todo-list" hx-params hx-post="/todo">add todo</button>
-        </form>
 
         <script src="https://unpkg.com/htmx.org@1.5.0"></script>
     </body>

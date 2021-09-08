@@ -1,0 +1,8 @@
+{% for todo in todos %}
+<li 
+    id="{{ todo }}"
+    hx-trigger="click"
+    hx-delete="/todo/{{todo}}"
+    hx-confirm="delete?">{{ todo }}
+</li>
+{% endfor %}

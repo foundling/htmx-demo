@@ -5,6 +5,7 @@
     <body>
         <h1>Todo List</h1>
 
+        <!-- refactor template -->
         <form name="new-todo">
             <input name="text" type="text" placeholder="add a todo item" value=""></input>
             <button hx-target=".todo-list" hx-swap="innerHTML" hx-post="/todo">add todo</button>
